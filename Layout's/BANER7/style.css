@@ -1,0 +1,60 @@
+body{
+
+    margin: 0;
+    padding: 0;
+}
+
+.baner, .baner2, .baner3, .stopka{
+
+    height: 100px;
+
+}
+
+.stopka{
+    background-color: darkmagenta;
+    clear: both;
+}
+
+.baner{
+    background-color: blue;
+}
+
+.baner2{
+    background-color: blueviolet;
+    width: 50%;
+    float: left;
+}
+
+.baner3{
+    background-color: chocolate;
+    width: 50%;
+    float: left;
+}
+
+.lewy{
+    float: left;
+    width: 40%;
+}
+
+.lewy1{
+    background-color: forestgreen;
+    height: 300px;
+}
+
+.lewy2{
+    background-color: fuchsia;
+    height: 300px;
+}
+
+.lewy3{
+    background-color: indianred;
+    height: 300px;
+}
+
+.prawy{
+
+    width: 60%;
+    height: 900px;
+    background-color: orange;
+    float: left;
+}

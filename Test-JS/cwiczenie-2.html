@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>2 - Obsługa formularzy w JavaScript</title>
+	<link href="arkusz-cwiczenia.css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<header>
+	
+		<h1>Restauracja "Słoneczne tarasy"</h1>
+
+	</header>
+	
+	<main>
+	
+		<article>
+	
+			<form id="formularz" method="post">
+				
+				<label>
+					Data wesela: <input type="date" id="data">
+				</label> <br><br>
+				<label>
+					Czas rozpoczęcia imprezy: <input type="time" id="czas">
+				</label>
+				<br><br>
+				<label>
+					Liczba gości: <input type="number" id="liczbaGosci">
+				</label> <br>
+				<fieldset>
+					<legend>Impreza jednodniowa czy dwudniowa</legend>
+					<label>
+						<input type="radio" name="ileDni" id="bezPoprawin"> Wesele (100zł/os)
+					</label> <br>
+					<label>
+						<input type="radio" name="ileDni" id="zPoprawinami"> Wesele z poprawinami (130zł/os)
+					</label> <br>
+				</fieldset>
+				<fieldset>
+					<legend>Opcje dodatkowe</legend>
+				<label>
+					<input type="checkbox" id="kwiaty"> kwiaty (+500zł)
+				</label> <br>
+				<label>
+					<input type="checkbox" id="budka"> foto-budka dla gości (+1000zł)
+				</label> <br>
+				<label>
+				<input type="checkbox" id="fontanna"> czekolada fontanna (+750zł)
+				</label>
+			</fieldset>
+			<p>Uwagi do zamówienia:</p>
+			<textarea id="uwagi" maxlength="300"></textarea>
+				
+				<div class="row">
+				
+					<input type="submit" value="Rezerwacja imprezy">
+				
+				</div>
+				
+			</form>
+			
+			<div id="wyniki"></div>
+			
+		</article>
+		
+	</main>
+	
+	<script>
+	
+		document.getElementById("formularz").addEventListener("submit", przetwarzaj);
+		
+		function przetwarzaj()
+		{
+			
+			event.preventDefault();
+			let dataWesela = document.getElementById("data").value
+			let czas = document.getElementById("czas").value
+			let uwagi = document.getElementById("uwagi").value
+			let bezPoprawin = document.getElementById("bezPoprawin")
+			let zPoprawinami = document.getElementById("zPoprawinami")
+			let kwiaty = document.getElementById("kwiaty")
+			let budka = document.getElementById("budka")
+			let fontanna = document.getElementById("fontanna")
+			let odp = ""
+			let koszt = 0
+			odp += "<p>Data wesela to " + dataWesela + "o godzinie " + czas + "</p>"
+			odp += "<p>Liczba uczestników wesela to łącznie " + liczbaGosci + " osób </p>"
+			if (bezPoprawin.checked){
+				odp += "<p>Wesele bez poprawin</p>"
+				koszt += liczbaGosci * 100
+			}
+			if (zPoprawinami.checked){
+				odp += "<p>Wesele z poprawinami</p>"
+				koszt += liczbaGosci * 130
+			}
+
+			let dodatkowe = "Opcje dodatkowe: "
+			if(kwiaty.checked){
+				dodatkowe += "kwiaty, "
+				koszt += 500
+			}
+			if(budka.checked){
+				dodatkowe += "foto-budka, "
+				koszt += 1000
+			}
+			if(fontanna.checked){
+				dodatkowe += "czekoladowa fontanna"
+				koszt += 750
+			}
+
+			odp += "<p>" + dodatkowe +"</p>"
+			odp += "<p>Uwagi do zamówienia: " + uwagi + "</p>"
+			odp += "<p>Łączny koszt imprezy: " + koszt + "</p>"
+
+			document.getElementById("wyniki").innerHTML = odp
+		}
+
+	</script>
+
+</body>
+</html>

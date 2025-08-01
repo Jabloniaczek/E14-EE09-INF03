@@ -1,0 +1,51 @@
+body{
+
+    padding: 0;
+    margin: 0;
+}
+
+.baner1, .stopka{
+    height: 100px;
+    background-color: black;
+}
+
+.baner1{
+    float: left;
+    width: 50%;
+
+}
+
+.baner2{
+    height: 100px;
+    background-color: hotpink;
+    width: 50%;
+    float: left;
+    
+
+}
+.stopka{
+    clear: both;
+}
+
+.lewy{
+    float: left;
+    width: 60%;
+}
+
+.lewy1{
+    height: 250px;
+    background-color: blue;
+}
+
+.lewy2{
+    height: 250px;
+    background-color: blueviolet;
+}
+
+.prawy{
+    float: left;
+    height: 500px;
+    width: 40%;
+    background-color: brown;
+
+}

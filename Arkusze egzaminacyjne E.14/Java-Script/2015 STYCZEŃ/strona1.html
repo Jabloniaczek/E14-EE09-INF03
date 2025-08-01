@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie egzaminacyjne</title>
+</head>
+<body>
+    <div id="glowny">
+        <a href="index.html"><img src="banerek.jpg" alt="baner"></a>
+        <ul>
+            <li><a href="">PROSTE DZIAŁANIA</a></li>
+            <li><a href="">Potęgowanie</a></li>
+        </ul>
+        <h1>PROSTE DZIAŁANIA</h1>
+        <label for="pierwsza">Podaj pierwszą liczbę:</label><input type="number" id="pierwsza"><br>
+        <label for="druga">Podaj drugą liczbę:</label><input type="number" id="druga"><br>
+        <input type="button" value="DODAWANIE" onclick="dzialanie('dodawanie')" id="dodawanie">
+        <input type="button" value="ODEJMOWANIE" onclick="dzialanie('odejmowanie')" id="odejmowanie">
+        <input type="button" value="MNOŻENIE" onclick="dzialanie('mnozenie')" id="mnozenie">
+        <input type="button" value="DZIELENIE" onclick="dzialanie('dzielenie')" id="dzielenie">
+        <div id="wynik"></div>
+    </div>
+    
+    <script>
+        
+        function dzialanie(param){
+            
+
+            let liczba1=parseInt(document.getElementById("pierwsza").value);
+            let liczba2=parseInt(document.getElementById("druga").value);
+
+            let wynik=document.getElementById("wynik");
+
+                
+
+                if(document.getElementById("pierwsza").value==="" || document.getElementById("druga").value===""){
+                    alert("Pola nie mogą być puste , uzupełnij!");
+                    return;
+                }
+            
+                if(isNaN(liczba1) || isNaN(liczba2)){
+                    alert("To nie jest liczba");
+                    return;
+                }
+
+
+            if(param==='dodawanie'){
+                wynikKon=liczba1+liczba2;
+                wynik.textContent=wynikKon;
+                
+            }
+
+            /*
+
+            if(param==='dodawanie'){
+
+            dodawanie(liczba1,liczba2,wynik) - to są argumenty ze zmiennych z liczba1,liczba2,wynik. tu trafiaja dane i referentka do domu
+
+             }
+            function dodawanie(){
+            wynik.textContent=liczba1+liczba2
+            }
+            */
+
+            else if(param==='odejmowanie'){
+                wynikKon=liczba1-liczba2;
+                wynik.textContent=wynikKon;
+                //wynik.textContent=liczba1-liczba2;
+            }
+
+            else if(param==='mnozenie'){
+                wynikKon=liczba1*liczba2;
+                wynik.textContent=wynikKon;
+            }
+
+
+
+
+            if(param==='dzielenie'){
+
+                if(document.getElementById("druga").value==="0"){
+                alert("nie można dzielić przez 0");
+                return;
+            }
+                wynikKon=liczba1/liczba2;
+                wynik.textContent=wynikKon;
+
+
+
+            }
+
+
+
+        }
+
+
+    </script>
+</body>
+</html>

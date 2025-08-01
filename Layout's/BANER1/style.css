@@ -1,0 +1,111 @@
+
+html{
+
+    height: 100%;
+
+}
+
+
+body{
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.baner{
+
+    height: 100px ;
+    width: 100% ;
+    background-color: blue;
+    font-size: 24px;
+    text-align: center
+
+}
+
+.baner:hover {background-color: brown;}
+
+
+
+@keyframes miganie-lewy{
+
+0%{
+
+    background-color: red;
+
+}
+
+50%{
+
+background-color: gold;
+
+}
+
+100%{
+
+background-color: red;
+
+}
+
+}
+
+
+@keyframes miganie-prawy{
+
+0%{
+
+background-color: violet;
+
+}
+
+50%{
+
+background-color: gold;
+
+}
+
+100%{
+
+background-color: violet;
+
+}
+
+}
+
+.lewy{
+    height: 100%;
+    width:50% ;
+    text-align: center;
+    font-size: 24;
+    background-color: red;
+    float:left;
+    animation:miganie-lewy 5s infinite;
+}
+
+.lewy:hover {background-color: blue;}
+
+.prawy
+{   
+    height: 100%;
+    width: 50% ;
+    font size: 24;
+    text-align: center;
+    background-color: violet;
+    float: left;
+    animation:miganie-prawy 5s infinite;
+}
+
+.prawy:hover {background-color: goldenrod;}
+
+
+.stopka{
+    text-align: center;
+    font-size: 24;
+    height: 80px ;
+    width: 100%;
+    background-color: green;
+    clear: both;
+
+}
+
+.stopka:hover {background-color: yellow;}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<style>
+    
+    
+    
+    ul, ol {
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    li{
+        margin-left: 20px;
+    }
+    body{
+
+        margin: 0;
+      padding:0;
+    }
+    #logo1{
+
+      
+        margin: 0;
+        padding: 0;
+        height: 100px;
+        width: 85%;
+        background-color: blue;
+        float:left;
+
+    }
+    #logo2{
+        height: 100px;
+        width: 15%;
+        background-color: blueviolet;
+        float: left;
+    }
+
+    #lewy{
+    
+        width: 50%;
+        float: left;
+    }
+
+    #lewy1{
+        height: 200px;
+        background-color: brown;
+    }
+
+    #lewy2{
+        height: 200px;
+        background-color: red;
+        animation: an 15s infinite;
+    }
+
+    #prawy{
+        float: left;
+        height: 400px;
+        width: 50%;
+        background-color: gold;
+    }
+
+    #stopka{
+        background-color: darkkhaki;
+        height: 100px;
+        clear: both;
+    }
+
+    #lewy1 p{
+        margin: 0;
+        padding: 30px;
+        background-color: chartreuse;
+        font-size: 200%;
+        display: inline-block;
+    }
+    #lewy2 p{
+        margin: 0;
+        padding: 25px;
+        background-color: chartreuse;
+        font-size: 200%;
+        display: inline-block;
+        
+    }
+    #button{
+        height: 50px;
+        width: 70px;
+    }
+
+    table{
+
+        border-collapse: collapse;
+    }
+    #lewy1:hover{
+        background-color: silver;
+        color: blue;
+   
+    }
+
+    #prawy:hover{
+        background-color: darkmagenta;
+    }
+
+    @keyframes an{
+        0%{
+            
+            background-color: red;
+
+        }
+
+        25%{
+            
+            background-color: blue;
+        }
+
+        50%{
+            
+            background-color: gold;
+        }
+
+        75%{
+            
+            background-color: aquamarine;
+        }
+
+        100%{
+            
+            background-color: chocolate;
+        }
+
+    }
+    #tabelka{
+        transform-origin:left;
+        transform: rotate(12deg);
+        
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: -25px;
+        width: 50%;
+        text-align: center;
+        border-bottom: 2px gold;
+        border-left: 2px solid red;
+        border-right: 2px solid yellow;
+        font-size: 250%;
+        float: left;
+    }
+    #tabelka td, #tabelka th{
+        border:1px solid red
+    }
+    #imie:hover{
+        background-color: blue;
+    }
+
+    #wiersz:hover{
+        background-color: gold;
+    }
+    #zalewski:hover{
+        background-color: silver;
+    }
+    #trojkat{
+        width: 0;
+        height: 0;
+        border-left: solid transparent 50px;
+        border-right: solid transparent 50px;
+        border-bottom: solid green 100px;
+        transform: rotate(45deg);
+        
+    }
+</style>
+
+<body>
+    
+    <div id="logo1">LOGO STRONY WWW</div>
+    <div id="logo2">MINI LOGO</div>
+    <div id="lewy">
+        <div id="lewy1">
+            <ol>
+                <li>RAZ</li>
+                <li>DWA</li>
+                <li>TRZY</li>
+            </ol>
+            <p id="przycisk1" onclick="">TO JEST TEKST LEWY1</p>
+        </div>
+
+        <div id="lewy2">
+            <ul>
+                <li>RAZ</li>
+                <li>DWA</li>
+                <li>TRZY</li>
+            </ul>
+            <p id="przycisk2" onclick="przycisk()">TO JEST TEKST LEWY2</p>
+        </div>
+    </div>
+    <div id="prawy">
+        <button id="button">kliknij mnie </button>
+        <br><br>
+        <div id="trojkat"></div>
+        <br><br>
+        <table id="tabelka">
+            <tr>
+            <th id="imie">Imie</th>
+            <th>Nazwisko</th>
+            </tr>
+            <tr id="wiersz">
+                <td>Kamil</td>
+                <td>Nowak</td>
+            </tr>
+            <tr>
+                <td>Andrzej</td>
+                <td id="zalewski">Zalewski</td>
+            </tr>
+        </table>
+    </div>
+    <div id="stopka">STOPKA STRONY WWW</div>
+
+
+</body>
+
+<script>
+let zmienna = document.getElementById("przycisk1").innerHTML="<b>tekst<b>"
+</script>
+
+</html>

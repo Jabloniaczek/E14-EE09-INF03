@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie egzaminacyjne</title>
+</head>
+<body>
+    <div id="glowny">
+        <a href="index.html"><img src="banerek.jpg" alt="baner"></a>
+        <ul>
+            <li><a href="">PROSTE DZIAŁANIA</a></li>
+            <li><a href="">Potęgowanie</a></li>
+        </ul>
+        <h1>PROSTE DZIAŁANIA</h1>
+        <label for="pierwsza">Podaj pierwszą liczbę:</label><input type="number" id="pierwsza"><br>
+        <label for="druga">Podaj drugą liczbę:</label><input type="number" id="druga"><br>
+        <input type="button" value="DODAWANIE" onclick="dodawanie()" id="dodawanie">
+        <input type="button" value="ODEJMOWANIE" onclick="odejmowanie()" id="odejmowanie">
+        <input type="button" value="MNOŻENIE" onclick="mnozenie()" id="mnozenie">
+        <input type="button" value="DZIELENIE" onclick="dzielenie()" id="dzielenie">
+        <div id="wynik"></div>
+    </div>
+    
+    <script>
+
+        function dodawanie(){
+            let liczba1 = document.getElementById("pierwsza").value;
+            let liczba2 = document.getElementById("druga").value;
+            let wynik = document.getElementById("wynik");
+            if(liczba1==="" || liczba2===""){
+                alert("uzupełnij pola , nie mogą być puste");
+                return;
+            }
+
+            liczba1=parseInt(liczba1);
+            liczba2=parseInt(liczba2);
+
+            
+
+            wynikKon=liczba1+liczba2;
+            wynik.textContent=wynikKon;
+        }
+
+        function odejmowanie(){
+            let liczba1 = document.getElementById("pierwsza").value;
+            let liczba2 = document.getElementById("druga").value;
+            let wynik=document.getElementById("wynik");
+
+            if(liczba1==="" || liczba2===""){
+                alert("pola nie mogą być puste, uzupełnij je wszystkie");
+                return;
+            }
+
+            liczba1=parseInt(liczba1);
+            liczba2=parseInt(liczba2);
+
+            wynikKon=liczba1-liczba2;
+            wynik.textContent=wynikKon;
+        } 
+
+
+        function mnozenie(){
+            let liczba1=document.getElementById("pierwsza").value;
+            let liczba2=document.getElementById("druga").value;
+            let wynik = document.getElementById("wynik");
+
+            if(liczba1==="" || liczba2===""){
+                alert("pola nie mogą być puste , uzupełnij je wszystkie")
+                return;
+            }
+
+            liczba1=parseInt(liczba1);
+            liczba2=parseInt(liczba2);
+
+            wynikKon=liczba1*liczba2;
+            wynik.textContent=wynikKon;
+            return wynikKon;
+        }
+
+        function dzielenie(){
+            let liczba1 = document.getElementById("pierwsza").value;
+            let liczba2 = document.getElementById("druga").value;
+
+            let wynik=document.getElementById("wynik");
+
+            if(liczba1==="" || liczba2===""){
+                alert("pola nie mogą być puste , uzupełnij je wszystkie");
+                return;
+            }
+
+            liczba1 = parseInt(liczba1)
+            liczba2 = parseInt(liczba2)
+
+
+            if(liczba2===0){
+                alert("nie wolno dzielić przez 0");
+            }
+
+            wynikKon=liczba1/liczba2;
+            wynik.textContent=wynikKon;
+
+        }
+    </script>
+</body>
+</html>

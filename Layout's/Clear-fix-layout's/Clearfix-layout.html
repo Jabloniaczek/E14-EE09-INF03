@@ -1,0 +1,38 @@
+<style>
+  .kontener {
+    border: 20px green solid;
+  }
+
+  .kontener::after {
+    background-color: red;
+    content: "";
+    height: 60px;
+    display: block;
+    clear: both;
+  }
+
+  .lewy {
+    float: left;
+    width: 50%;
+    height: 100px;
+    background: black;
+  }
+  .prawy {
+    float: left;
+    width: 50%;
+    height: 100px;
+    background: blue;
+  }
+
+  .nastepny {
+    width: 100%;
+    height: 80px;
+    background-color: aquamarine;
+  }
+</style>
+
+<div class="kontener">
+  <div class="lewy"></div>
+  <div class="prawy"></div>
+</div>
+<div class="nastepny"></div>

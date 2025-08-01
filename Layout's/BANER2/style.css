@@ -1,0 +1,78 @@
+body{
+
+    margin: 0;
+    padding: 0;
+
+
+}
+
+#header{
+    background-color: aquamarine;
+    /*background-image: url(01.jpg);*/ ścieżka do obrazka 
+    color: red;
+    text-align: center;
+    font-size: 300%;
+    /* height:auto rozwiązanie na automatyczne rozwijanie się banera */
+    height: 120px; 
+
+}
+
+#footer{
+background-color: aquamarine;
+clear: both;
+height: 80px;
+color: red;
+font-size: 300%;
+text-align: center;
+animation:kolorek 5s infinite;
+
+
+}
+
+#lewy{
+height: 500px;
+background-color: blue;
+width: 60%;
+float: left;
+text-align: center;
+color: black;
+font-size: 200%;
+
+}
+
+#prawy{
+height: 500px;
+width: 40%;
+background-color: blueviolet;
+float: left;
+text-align: center;
+color: black;
+font-size: 200%;
+}
+
+@keyframes kolorek {
+
+0%{
+
+    background-color: aquamarine;
+}
+
+50%{
+
+    background-color: brown;
+}
+
+100%{
+
+background-color: aquamarine;
+
+}
+
+}
+
+#header:hover {
+    background-color: gold;
+}
+    zmiana koloru po najechaniu na baner na górze pseuoclasą hover
+
+    

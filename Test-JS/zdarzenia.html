@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="test"></div>
+<div id="test2"></div>
+<div id="test3"></div>
+<div class="test4"></div>
+
+<div class="test5"></div>
+<div class="test5"></div>
+<div class="test5"></div>
+<div class="test5"></div>
+<div class="test5"></div>
+<div class="test5"></div>
+
+<div class="tescik"></div>
+<div class="tescik"></div>
+<div class="tescik"></div>
+<div class="tescik2"></div>
+<div class="tescik2"></div>
+<div class="tescik2"></div>
+
+
+</body>
+<script>
+        //document.getElementById("test")- gdy chcemy uzywac raz 
+        let uchwyt = document.getElementById("test"); // gdy chcemy uzywac wielokrotnie 
+        uchwyt.innerHTML="Hello1";
+
+        let uchwyt2 = document.getElementById("test2");
+        uchwyt2.textContent="Hello2";
+
+        let uchwyt3 = document.getElementsByClassName("tescik");
+        uchwyt3[0].innerHTML="Hello3"
+        uchwyt3[1].innerHTML="Hello3"
+        uchwyt3[2].innerHTML="Hello3"
+
+        let uchwyt4 = document.getElementsByClassName("tescik2");
+        uchwyt4[0].textContent="Hello4"
+        uchwyt4[1].textContent="Hello4"
+        uchwyt4[2].textContent="Hello4"
+
+        let uchwyt5 = document.querySelector("#test3")
+
+
+        let uchwyt6 = document.querySelector(".test4")
+
+        let uchwyt7 = document.querySelectorAll(".test5")
+        uchwyt7[0].textContent="Query"
+        uchwyt7[1].textContent="Query"
+        uchwyt7[2].textContent="Query"
+        uchwyt7[3].textContent="Query"
+        uchwyt7[4].textContent="Query"
+        uchwyt7[5].textContent="Query"
+
+</script>
+</html>

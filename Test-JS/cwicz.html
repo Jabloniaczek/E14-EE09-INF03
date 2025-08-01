@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        function dodaj(a,b){
+            
+            return a+b
+        }
+
+        let wynik=dodaj(5,5)
+
+        console.log("Wynik dodawania: "+wynik)
+
+
+        /*let n = parseInt(prompt("Podaj liczbę"))
+        let suma=0
+        for(let s = 0 ; s<n ; s++){
+            suma += s+1
+        }
+        console.log("dzialanie petli: " + suma)*/
+
+        let a = parseInt(prompt("Podaj stopnie w C by zamienic na F "))
+
+        function stopnie(a){
+
+            let wynik=a*9/5+32
+            return wynik
+        
+        }
+
+
+        function odwroctekst(tekst){
+            let odwrocony=""
+            
+            for(i = tekst.length -1; i>=0; i--){
+                odwrocony+=tekst[i]
+               
+            }
+            return odwrocony
+        }
+
+
+        for(let i=2;i<=20;i=i+2){
+            console.log(i)
+        }
+
+       let los=0
+        while(los!==7){
+            los=Math.floor(Math.random() * 10 + 1)
+            console.log(los)
+        }
+
+
+
+        function czyParzysta(a){
+            if(a % 2 ===0 ){
+                console.log("jest parzysta")
+            }
+
+            else{
+
+                console.log("liczba nie jest parzysta")
+            }
+        }
+
+        function twojeImie(imie){
+            return imie;
+        }
+
+        let imie = twojeImie("Daniel")
+        console.log("Moje imie to:"+ imie)
+
+        function ktoraWieksza(a,b,c){
+
+            if(a > b && a>c) {
+                return a 
+            }
+            else if (b > c && b>a) {
+                return b
+            }
+
+            else if(c > a && c >b){
+                return c 
+            }
+
+            
+        }
+
+        let tabimie=["Daniel", "Rafał","Kamil"]
+
+        function sprawdzImie(imie){
+            if(tabimie.includes(imie)){
+                console.log("twoje imie istnieje w bazie ")
+            }
+
+            else{
+                console.log("imienia nie ma w bazie ")
+            }
+            return {inbaza: tabimie.includes(imie),imie: imie}
+        }
+
+        let tabimie2=["Daniel", "Rafał","Kamil"]
+        function sprawdzImie2(imie){
+            let foundornot=false
+            for(let i=0;i<tabimie2.length;i++){
+                if(imie===tabimie2[i]){
+                   
+                    foundornot=true
+                    break;
+                }
+
+        
+            }
+
+            if(foundornot===true){
+                        console.log("znaleziono")
+                    }
+
+                    else{
+                        console.log("nie znaleziono")
+                    }
+            return foundornot
+        }
+    </script>
+
+
+
+    
+
+</body>
+</html>

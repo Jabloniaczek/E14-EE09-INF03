@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+
+
+function funkcja1(){  //funkcja numer 1 
+    console.log("funkcja numer 1")
+}
+
+
+
+function funkcja11(){  //funkcja numer 1 
+    let zmienna1=0;
+    let zmienna2=0;
+    
+    return wynik;
+}
+
+function funkcja2(){ //funkcja numer 2 
+    return("funkcja numer 2")
+}
+
+funkcja1()
+let zmienna = funkcja2()
+console.log(zmienna)
+
+function funkcja3(){ //funkcja numer 3
+    return 2+2
+}
+
+function funkcja4(a,b){ //funkcja numer 4
+    return a+b
+}
+
+zmienna1=funkcja3()
+console.log(zmienna1)
+
+let zmienna2 = funkcja4(2,2)
+console.log(zmienna2)
+
+function funkcja5(a,b){ //funkcja numer 5 
+console.log(a+b)
+return a+b
+
+}
+
+
+funkcja5(6,6)
+
+function funkcja6(a,b){ //funkcja numer 6
+let wynik = a + b
+console.log(wynik)
+return wynik
+
+}
+
+
+funkcja6(8,8)
+
+
+function bankomat1(){
+    let saldo = 1000;
+    function wplac(a){
+        saldo += a
+        console.log("Wplaciles"+" "+a + " " + "twoje saldo to" + " " + saldo)
+        return saldo
+        
+        
+        }
+
+        function wyplac(b){
+            saldo -= b
+            console.log("wyplaciles"+" "+b+" "+" twoje saldo to" +" "+ saldo)
+            return saldo
+            
+        }
+        return {wplac, wyplac}
+    }
+
+    let bank = bankomat1();
+    bank.wplac(500)
+    bank.wyplac(100)
+
+
+    function bankomat2(getpin){
+        const pin = 123;
+        //let getpin;
+        let saldo =1000;
+
+        function logowanie(){
+            if(getpin===pin){
+                function wplac(a){
+                    saldo += a
+                    console.log("wplaciles"+" "+a+" "+ "twoje saldo to" + " " + saldo);
+                    return saldo;
+                }
+
+                function wyplac(b){
+                    saldo -= b 
+                    console.log("wyplaciles"+" "+b+" "+"twoje saldo to "+" "+ saldo);
+                    return saldo;
+                }
+
+                return {wplac,wyplac};
+            }
+
+            else{
+
+                return "nie prawidlowy pin sproboj ponownie"
+
+            }
+        }
+        return {logowanie};
+
+        }
+
+
+        //bank2=bankomat2()
+
+        //let zalogowany = bank2.logowanie(123)
+
+        //zalogowany.wplac(500)
+        //zalogowany.wyplac(150)
+
+
+        let bank2=bankomat2(123).logowanie
+
+        let zalogowany = bank2()
+        
+        
+
+        zalogowany.wplac(100)
+        zalogowany.wyplac(400)
+
+
+        function kalkulator(){
+            function dodaj(a,b){
+                console.log("Cyfra 1" + " "+a+" "+"Cyfra 2"+" "+b+" "+(a+b))
+                return a+b;
+            }
+
+            function odejmij(a,b){
+                console.log("Cyfra 1" + " "+a+" "+"Cyfra 2"+" "+b+" "+(a-b))
+                return a-b;
+            }
+
+            function pomnoz(a,b){
+                console.log("Cyfra 1" + " "+a+" "+"Cyfra 2"+" "+b+" "+(a*b))
+                return a*b;
+            }
+
+            function podziel(a,b){
+                console.log("Cyfra 1" + " "+a+" "+"Cyfra 2"+" "+b+" "+(a/b))
+                return a/b;
+            }
+            return {dodaj,odejmij,pomnoz,podziel}
+        }
+        
+       //console.table()
+       //console.dir()
+
+
+        function funkcjax(){
+        return "funkcja void";
+       }
+
+       let zmiennax=funkcjax();
+
+       zmiennax += " " + " dodano "
+       
+
+       console.log(zmiennax)
+
+       
+       for(i=0; i<5; i++){
+        console.log("To jest pętla" + i);
+        
+       }
+
+       let tab=[10,20,30,40,50,60,70,80,90,100]
+       for(i=0; i<tab.length; i++){
+        console.log(tab[i]=tab[i]*2)
+        
+       }
+
+       let tab1=[10,20,30,40,50,60,70,80,90,100]
+       for(i=0; i<tab1.length; i++){
+        console.log(tab1[i]*=2)
+        
+       }
+
+       
+       let tab2=[10,20,30,40,50,60,70,80,90,100]
+       for(i=0; i<tab2.length; i++){
+        if(i == 5){
+            console.log("indeks 5 to" + " "+ i)
+            break
+        }
+       }
+
+       let tab3=[10,20,30,40,50,60,70,80,90,100]
+       for(i=0;i<tab3.length;i++){
+        if(i===5){
+            
+            continue
+        }
+
+        else {
+            console.log("iteracja dla tab3"+tab3[i])
+        }
+       }
+
+       let kwadrat = 2 
+       kwadrat *=2
+       console.log(kwadrat)
+       
+       let kwadrat2 = 2 
+       kwadrat2=kwadrat2*2
+
+       console.log(kwadrat2)
+
+
+       let t=[1,2,3,4,5,6,7,8,9]
+       
+       t.push(10) //dodaje na koncu
+       t.unshift(0)//dodaje na poczatku
+       console.log(t)
+
+       let tab5=[1,2,3,4,5,6,7,8,9]
+       
+       for(let i=0; i<tab5.length;i++){
+        if(tab5[i]%2===1){
+
+        console.log("liczby nieparzyste to"+tab5[i]+" "+" "+i)
+
+        }
+
+        
+
+       }
+
+       let sterujaca=0
+       while(sterujaca<10){
+        console.log("petla while"+sterujaca)
+        sterujaca++
+       }
+
+
+       
+
+       tab6=["Kamil","Kasia","Daniel","Rafał"]
+       let sterujaca1=0
+       while(sterujaca1<tab6.length){
+        console.log("imiona:"+ tab6[sterujaca1] +" " + "imie numer" + " " + (sterujaca1 +1) )
+        sterujaca1++
+       }
+
+       let tab7=["Andrzej","Angelika","Kamila","Luiza"]
+
+       let xi=3
+
+       while(xi>=0){
+        console.log("imiona od tylu tablicy to:"+tab7[xi] + "numer imienia:" + " "+ (xi-1))
+        xi--
+       }
+
+
+
+       
+       let tab8=[10,20,30,40,50,60,70,80]
+       let y=0;
+
+       while(y<tab8.length){
+        console.log("Cyfry to"+" "+tab8[y] + " "+  "Cyfra numer:" + " " + (y+1))
+        y++
+       }
+       
+       let tab9=[10,20,30,40,50,60,70,80]
+
+       let start=tab9.length -1
+
+       while(start>=0){
+        console.log(tab9[start])
+        start--
+       }
+
+
+       let tab10=[10,20,30,40,50,60,70,80]
+       let x1 = 7
+
+       while(x1>=0){
+        console.log(tab10[x1])
+        x1--
+       }
+
+        let strzalkowa=(a,b) => a+b ; 
+        let wyniczek=(strzalkowa(2,6))
+
+
+        console.log(wyniczek)
+
+        let strzalkowa1=(imie)=>imie;
+        let wyniczek1=strzalkowa1("daniel")
+        console.log(wyniczek1)
+
+        let tab11=[10,20,30,40,50,60,70,80]
+
+        tab11.forEach((element,index) => {console.log("Element"+element,"Indeks"+index)});
+
+        
+        let tab12=[10,20,30,40,50,60,70,80]
+
+        tab12.forEach(function(element,index){ console.log("Element"+element,"indeks"+index)})
+
+
+
+
+
+
+
+function bb(){
+let pin = 123 ;
+let saldo = 500 ; 
+let  proby=0;
+
+function logowanie(getpin){
+    if(getpin!==pin){
+        proby++
+        if(proby>=3){
+            return "dostep zablokowany";
+        }
+        
+    }
+    else {
+        function wplac(a){
+            saldo+=a;
+            return saldo;
+        
+        }
+        return {wplac}
+    }
+}
+return {logowanie}
+}
+    </script>
+</body>
+</html>

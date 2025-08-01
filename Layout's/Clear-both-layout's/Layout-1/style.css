@@ -1,0 +1,20 @@
+#baner {
+  background-color: aquamarine;
+}
+
+#lewy {
+  background-color: blue;
+}
+
+#prawy {
+  background-color: blueviolet;
+}
+
+#stopka {
+  background-color: brown;
+}
+
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
