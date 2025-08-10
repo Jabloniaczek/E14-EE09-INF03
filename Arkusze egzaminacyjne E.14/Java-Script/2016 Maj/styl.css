@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#baner {
+  background-color: #3a7ad9;
+  text-align: center;
+}
+
+#glowny {
+  display: flex;
+  gap: 10px;
+}
+
+#lewy {
+  background-color: #5d93e2;
+  height: 400px;
+  width: 30%;
+}
+
+#prawy {
+  background-color: #88b0ec;
+  height: 400px;
+  width: 70%;
+}
+
+#stopka {
+  background-color: #3a7ad9;
+  text-align: right;
+}
+
+#kontener {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+}
