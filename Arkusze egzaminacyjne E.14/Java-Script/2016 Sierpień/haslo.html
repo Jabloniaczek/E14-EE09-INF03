@@ -9,26 +9,55 @@
   <body>
     <div id="glowny">
       <header id="baner">
-        <h3><a href="index.html">Sprawdź swoje hasło</a></h3>
+        <h1><a href="index.html">Sprawdź swoje hasło</a></h1>
       </header>
+
       <main id="main">
-        <section class="sekcja">
-          <h2>WYBIERZ</h2>
+        <section class="sekcjalewy">
+          <h2>Wybierz</h2>
           <ol>
             <li><a href="haslo.html">Sprawdź hasło</a></li>
             <li><a href="zasady.html">Zasady tworzenia hasła</a></li>
           </ol>
         </section>
-        <section class="sekcja">
-          <label for="value">Sprawdź hasło:</label>
-          <input type="text" id="value" />
-          <button id="check">Sprawdź</button>
+
+        <section class="sekcjaprawy">
+          <p>
+            Twoje hasło:
+            <input id="value" type="password" />
+            <button id="check">Sprawdź</button>
+          </p>
+          <p id="wynik"></p>
         </section>
       </main>
+
       <footer id="stopka">
-        <p>Miernik jakości hasła</p>
-        <p>Stronę wykonał:</p>
+        <h3>Miernik jakości hasła</h3>
+        <p>Stronę opracował: ____________</p>
       </footer>
     </div>
+
+    <script>
+      const przycisk = document.getElementById("check");
+      const input = document.getElementById("value");
+      let wynik = document.getElementById("wynik");
+      przycisk.addEventListener("click", function () {
+        const haslo = input.value;
+        D;
+        let maCyfre = /\d/.test(haslo);
+
+        if (haslo.length >= 7 && /\d/.test(haslo)) {
+          wynik.textContent = "dobre";
+        } else if (haslo.length >= 4 && haslo.length <= 6 && maCyfre) {
+          wynik.textContent = "średnie";
+        } else if (haslo.length <= 4) {
+          wynik.textContent = "słabe";
+        }
+
+      });
+    </script>
   </body>
 </html>
+
+//przycisk.addEventListener("click", () => { //wynik.textContent =
+ocenHaslo(input.value); // }); //
