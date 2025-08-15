@@ -41,8 +41,8 @@
       const przycisk = document.getElementById("check");
       const input = document.getElementById("value");
       let wynik = document.getElementById("wynik");
-      przycisk.addEventListener("click", function () {
-        const haslo = input.value;
+      function funkcja(argum) {
+        let haslo = argum;
         let maCyfre = /\d/.test(haslo);
 
         if (haslo.length >= 7 && /\d/.test(haslo)) {
@@ -52,12 +52,14 @@
         } else if (haslo.length <= 4) {
           wynik.textContent = "słabe";
         }
+      }
 
+      przycisk.addEventListener("click", () => {
+        funkcja(input.value);
       });
     </script>
   </body>
 </html>
 
-
-
-
+//przycisk.addEventListener("click", () => { //wynik.textContent =
+ocenHaslo(input.value); // }); //
